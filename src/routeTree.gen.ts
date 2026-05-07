@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TypographyRouteImport } from './routes/typography'
+import { Route as PosRouteImport } from './routes/pos'
+import { Route as LogoRouteImport } from './routes/logo'
+import { Route as ImageryRouteImport } from './routes/imagery'
+import { Route as ElementsRouteImport } from './routes/elements'
+import { Route as ColorsRouteImport } from './routes/colors'
+import { Route as BrandRouteImport } from './routes/brand'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TypographyRoute = TypographyRouteImport.update({
+  id: '/typography',
+  path: '/typography',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PosRoute = PosRouteImport.update({
+  id: '/pos',
+  path: '/pos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LogoRoute = LogoRouteImport.update({
+  id: '/logo',
+  path: '/logo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImageryRoute = ImageryRouteImport.update({
+  id: '/imagery',
+  path: '/imagery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ElementsRoute = ElementsRouteImport.update({
+  id: '/elements',
+  path: '/elements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ColorsRoute = ColorsRouteImport.update({
+  id: '/colors',
+  path: '/colors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandRoute = BrandRouteImport.update({
+  id: '/brand',
+  path: '/brand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/brand': typeof BrandRoute
+  '/colors': typeof ColorsRoute
+  '/elements': typeof ElementsRoute
+  '/imagery': typeof ImageryRoute
+  '/logo': typeof LogoRoute
+  '/pos': typeof PosRoute
+  '/typography': typeof TypographyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/brand': typeof BrandRoute
+  '/colors': typeof ColorsRoute
+  '/elements': typeof ElementsRoute
+  '/imagery': typeof ImageryRoute
+  '/logo': typeof LogoRoute
+  '/pos': typeof PosRoute
+  '/typography': typeof TypographyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/brand': typeof BrandRoute
+  '/colors': typeof ColorsRoute
+  '/elements': typeof ElementsRoute
+  '/imagery': typeof ImageryRoute
+  '/logo': typeof LogoRoute
+  '/pos': typeof PosRoute
+  '/typography': typeof TypographyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/brand'
+    | '/colors'
+    | '/elements'
+    | '/imagery'
+    | '/logo'
+    | '/pos'
+    | '/typography'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/brand'
+    | '/colors'
+    | '/elements'
+    | '/imagery'
+    | '/logo'
+    | '/pos'
+    | '/typography'
+  id:
+    | '__root__'
+    | '/'
+    | '/brand'
+    | '/colors'
+    | '/elements'
+    | '/imagery'
+    | '/logo'
+    | '/pos'
+    | '/typography'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrandRoute: typeof BrandRoute
+  ColorsRoute: typeof ColorsRoute
+  ElementsRoute: typeof ElementsRoute
+  ImageryRoute: typeof ImageryRoute
+  LogoRoute: typeof LogoRoute
+  PosRoute: typeof PosRoute
+  TypographyRoute: typeof TypographyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/typography': {
+      id: '/typography'
+      path: '/typography'
+      fullPath: '/typography'
+      preLoaderRoute: typeof TypographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pos': {
+      id: '/pos'
+      path: '/pos'
+      fullPath: '/pos'
+      preLoaderRoute: typeof PosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/logo': {
+      id: '/logo'
+      path: '/logo'
+      fullPath: '/logo'
+      preLoaderRoute: typeof LogoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/imagery': {
+      id: '/imagery'
+      path: '/imagery'
+      fullPath: '/imagery'
+      preLoaderRoute: typeof ImageryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/elements': {
+      id: '/elements'
+      path: '/elements'
+      fullPath: '/elements'
+      preLoaderRoute: typeof ElementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/colors': {
+      id: '/colors'
+      path: '/colors'
+      fullPath: '/colors'
+      preLoaderRoute: typeof ColorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brand': {
+      id: '/brand'
+      path: '/brand'
+      fullPath: '/brand'
+      preLoaderRoute: typeof BrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +197,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrandRoute: BrandRoute,
+  ColorsRoute: ColorsRoute,
+  ElementsRoute: ElementsRoute,
+  ImageryRoute: ImageryRoute,
+  LogoRoute: LogoRoute,
+  PosRoute: PosRoute,
+  TypographyRoute: TypographyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
