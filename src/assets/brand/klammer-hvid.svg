@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="300" viewBox="0 0 440 300">
+  <rect width="440" height="300" fill="#e02e31"/>
+  <polyline points="20,80 20,20 80,20" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <polyline points="420,80 420,20 360,20" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <polyline points="20,220 20,280 80,280" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <polyline points="420,220 420,280 360,280" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <text x="220" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#ffffff" letter-spacing="1">Klammer — Hvid version</text>
+  <text x="220" y="270" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#ffffff" font-style="italic">Altid en god idé</text>
+</svg>

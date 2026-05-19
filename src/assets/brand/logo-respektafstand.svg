@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" viewBox="0 0 560 340">
+  <rect width="560" height="340" fill="#faf9f7"/>
+  <!-- material edge -->
+  <rect x="16" y="16" width="528" height="308" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="5 3"/>
+  <!-- clearspace tint strips -->
+  <rect x="16" y="16" width="528" height="84" fill="#f7c3c7" opacity="0.45"/>
+  <rect x="16" y="240" width="528" height="84" fill="#f7c3c7" opacity="0.45"/>
+  <rect x="16" y="100" width="124" height="140" fill="#f7c3c7" opacity="0.45"/>
+  <rect x="420" y="100" width="124" height="140" fill="#f7c3c7" opacity="0.45"/>
+  <!-- white inner area -->
+  <rect x="140" y="100" width="280" height="140" fill="#fff"/>
+  <!-- logo placeholder -->
+  <rect x="140" y="100" width="280" height="140" fill="#feede0" stroke="#e02e31" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="280" y="166" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="bold" fill="#1a1a1a">Bog &amp; idé</text>
+  <text x="280" y="186" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">LOGO PLACEHOLDER</text>
+  <!-- TOP dimension line -->
+  <line x1="280" y1="100" x2="280" y2="16" stroke="#e02e31" stroke-width="1" stroke-dasharray="3 2" opacity="0.6"/>
+  <line x1="150" y1="58" x2="410" y2="58" stroke="#e02e31" stroke-width="1.5"/>
+  <polygon points="150,54 150,62 140,58" fill="#e02e31"/>
+  <polygon points="410,54 410,62 420,58" fill="#e02e31"/>
+  <rect x="248" y="47" width="64" height="22" fill="#faf9f7"/>
+  <text x="280" y="62" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e02e31">O's højde</text>
+  <!-- BOTTOM dimension line -->
+  <line x1="150" y1="282" x2="410" y2="282" stroke="#e02e31" stroke-width="1.5"/>
+  <polygon points="150,278 150,286 140,282" fill="#e02e31"/>
+  <polygon points="410,278 410,286 420,282" fill="#e02e31"/>
+  <rect x="248" y="271" width="64" height="22" fill="#faf9f7"/>
+  <text x="280" y="286" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e02e31">O's højde</text>
+  <!-- LEFT dimension -->
+  <line x1="78" y1="110" x2="78" y2="230" stroke="#e02e31" stroke-width="1.5"/>
+  <polygon points="74,110 82,110 78,100" fill="#e02e31"/>
+  <polygon points="74,230 82,230 78,240" fill="#e02e31"/>
+  <rect x="54" y="158" width="48" height="24" fill="#faf9f7"/>
+  <text x="78" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e02e31">O's højde</text>
+  <!-- RIGHT dimension -->
+  <line x1="482" y1="110" x2="482" y2="230" stroke="#e02e31" stroke-width="1.5"/>
+  <polygon points="478,110 486,110 482,100" fill="#e02e31"/>
+  <polygon points="478,230 486,230 482,240" fill="#e02e31"/>
+  <rect x="458" y="158" width="48" height="24" fill="#faf9f7"/>
+  <text x="482" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e02e31">O's højde</text>
+  <!-- labels -->
+  <text x="280" y="326" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">Respektafstand = O'ets mål på alle sider af logoet</text>
+  <rect x="350" y="18" width="100" height="20" fill="#f7c3c7" opacity="0.8" rx="2"/>
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#c0392b" font-weight="600">CLEARSPACE</text>
+</svg>

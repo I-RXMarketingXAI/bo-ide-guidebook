@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380">
+  <rect width="560" height="380" fill="#e8e4df"/>
+  <line x1="0" y1="0" x2="560" y2="380" stroke="#e0ddd9" stroke-width="1"/>
+  <line x1="560" y1="0" x2="0" y2="380" stroke="#e0ddd9" stroke-width="1"/>
+  <rect x="1" y="1" width="558" height="378" fill="none" stroke="#e02e31" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="280.0" y="184.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#1a1a1a">Foto: Kreativitet i gang</text>
+  <text x="280.0" y="202.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">560 × 380 px</text>
+  <text x="280.0" y="216.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#aaa">Familie der tegner, maler eller bygger</text>
+</svg>

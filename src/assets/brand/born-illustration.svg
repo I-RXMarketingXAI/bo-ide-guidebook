@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360">
+  <rect width="560" height="360" fill="#fff0e8"/>
+  <line x1="0" y1="0" x2="560" y2="360" stroke="#e0ddd9" stroke-width="1"/>
+  <line x1="560" y1="0" x2="0" y2="360" stroke="#e0ddd9" stroke-width="1"/>
+  <rect x="1" y="1" width="558" height="358" fill="none" stroke="#e02e31" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="280.0" y="176.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#1a1a1a">Børneunivers — Illustration</text>
+  <text x="280.0" y="194.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">560 × 360 px</text>
+  <text x="280.0" y="204.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#aaa">Sæsonbestemte illustrationer, f.eks. jul</text>
+</svg>
