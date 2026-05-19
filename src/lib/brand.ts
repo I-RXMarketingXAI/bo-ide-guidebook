@@ -2,32 +2,78 @@ export type BrandColor = {
   name: string;
   hex: string;
   rgb: string;
-  cmyk: string;
   role: string;
+  category: "primary" | "background" | "secondary";
+  textOnDark?: boolean;
 };
 
-// Placeholder palette — replace with real Bo & Ide values once supplied.
+// Official Bog & idé palette
 export const brandColors: BrandColor[] = [
-  { name: "Ide Sand", hex: "#E8DDC9", rgb: "232, 221, 201", cmyk: "0, 5, 13, 9", role: "Primary background tone" },
-  { name: "Bo Clay", hex: "#C9A77C", rgb: "201, 167, 124", cmyk: "0, 17, 38, 21", role: "Warm accent" },
-  { name: "Linen White", hex: "#F6F1E7", rgb: "246, 241, 231", cmyk: "0, 2, 6, 4", role: "Surface" },
-  { name: "Stone", hex: "#8C8378", rgb: "140, 131, 120", cmyk: "0, 6, 14, 45", role: "Neutral text" },
-  { name: "Charcoal", hex: "#2B2622", rgb: "43, 38, 34", cmyk: "0, 12, 21, 83", role: "Primary text" },
-  { name: "Forest", hex: "#3F4A3C", rgb: "63, 74, 60", cmyk: "15, 0, 19, 71", role: "Deep accent" },
-  { name: "Brick", hex: "#A85B3D", rgb: "168, 91, 61", cmyk: "0, 46, 64, 34", role: "Highlight" },
+  {
+    name: "Bog & idé Rød",
+    hex: "#e02e31",
+    rgb: "224, 46, 49",
+    role: "Primær brandfarve. Dominerende i brand-kommunikation.",
+    category: "primary",
+    textOnDark: true,
+  },
+  {
+    name: "Bog & idé Beige",
+    hex: "#feede0",
+    rgb: "254, 237, 224",
+    role: "Baggrundsfarve. Dynamik og variation. Kundeklub-design.",
+    category: "background",
+  },
+  {
+    name: "Bog & idé Lys Rød",
+    hex: "#f7c3c7",
+    rgb: "247, 195, 199",
+    role: "Sekundær kampagnefarve.",
+    category: "background",
+  },
+  {
+    name: "Bog & idé Lys Blå",
+    hex: "#b4dcf6",
+    rgb: "180, 220, 246",
+    role: "Sekundær kampagnefarve.",
+    category: "background",
+  },
+  {
+    name: "Bog & idé Blå",
+    hex: "#00375c",
+    rgb: "0, 55, 92",
+    role: "Topskilt (Bestseller) og sekundær accent.",
+    category: "secondary",
+    textOnDark: true,
+  },
 ];
 
 export const brandFonts = [
   {
-    name: "Cormorant Garamond",
-    role: "Display / Headlines",
-    weights: "Light, Regular, Medium",
-    sample: "Et hjem fortæller en historie.",
+    name: "Velo Serif Display",
+    role: "Brand-font · Budskaber",
+    weights: "Bold 700, Medium 500",
+    usage:
+      "Bruges på grafiske materialer til budskaber om branding, salg og kampagner. Kun på overskriftsniveau — aldrig til brødtekst.",
+    sample: "Altid en god idé",
+    cssFamily: "'DM Serif Display', 'Velo Serif Display', Georgia, serif",
   },
   {
-    name: "Inter",
-    role: "Body / UI",
-    weights: "Regular, Medium, Semibold",
-    sample: "Bo & Ide står for ærlige materialer og tidløst design.",
+    name: "Muller",
+    role: "Brand-font · Information",
+    weights: "Light 300, Regular 400, Bold 700",
+    usage:
+      "Bruges på materialer med et informativt niveau — brødtekster, wayfinding, etiketter og steder med meget tekst.",
+    sample: "Bog & idé står for kuratering, vejledning og læselyst.",
+    cssFamily: "'Manrope', 'Muller', Inter, sans-serif",
+  },
+  {
+    name: "Verveine",
+    role: "Børne-font · Overskrifter",
+    weights: "Regular",
+    usage:
+      "Bruges udelukkende til opmærksomhedsskabende tekster og overskrifter i børnematerialer — aldrig til brødtekst.",
+    sample: "Kom og leg med!",
+    cssFamily: "'Caveat', 'Verveine', cursive",
   },
 ];

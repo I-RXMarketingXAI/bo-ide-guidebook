@@ -10,17 +10,40 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TypographyRouteImport } from './routes/typography'
+import { Route as ToneRouteImport } from './routes/tone'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PosRouteImport } from './routes/pos'
 import { Route as LogoRouteImport } from './routes/logo'
+import { Route as KundeklubRouteImport } from './routes/kundeklub'
+import { Route as KlammerRouteImport } from './routes/klammer'
 import { Route as ImageryRouteImport } from './routes/imagery'
 import { Route as ElementsRouteImport } from './routes/elements'
+import { Route as ConceptsRouteImport } from './routes/concepts'
 import { Route as ColorsRouteImport } from './routes/colors'
+import { Route as ChildrenRouteImport } from './routes/children'
+import { Route as CampaignRouteImport } from './routes/campaign'
 import { Route as BrandRouteImport } from './routes/brand'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TypographyRoute = TypographyRouteImport.update({
   id: '/typography',
   path: '/typography',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToneRoute = ToneRouteImport.update({
+  id: '/tone',
+  path: '/tone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PosRoute = PosRouteImport.update({
@@ -33,6 +56,16 @@ const LogoRoute = LogoRouteImport.update({
   path: '/logo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KundeklubRoute = KundeklubRouteImport.update({
+  id: '/kundeklub',
+  path: '/kundeklub',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KlammerRoute = KlammerRouteImport.update({
+  id: '/klammer',
+  path: '/klammer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImageryRoute = ImageryRouteImport.update({
   id: '/imagery',
   path: '/imagery',
@@ -43,9 +76,24 @@ const ElementsRoute = ElementsRouteImport.update({
   path: '/elements',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConceptsRoute = ConceptsRouteImport.update({
+  id: '/concepts',
+  path: '/concepts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ColorsRoute = ColorsRouteImport.update({
   id: '/colors',
   path: '/colors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChildrenRoute = ChildrenRouteImport.update({
+  id: '/children',
+  path: '/children',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignRoute = CampaignRouteImport.update({
+  id: '/campaign',
+  path: '/campaign',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BrandRoute = BrandRouteImport.update({
@@ -62,32 +110,56 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/brand': typeof BrandRoute
+  '/campaign': typeof CampaignRoute
+  '/children': typeof ChildrenRoute
   '/colors': typeof ColorsRoute
+  '/concepts': typeof ConceptsRoute
   '/elements': typeof ElementsRoute
   '/imagery': typeof ImageryRoute
+  '/klammer': typeof KlammerRoute
+  '/kundeklub': typeof KundeklubRoute
   '/logo': typeof LogoRoute
   '/pos': typeof PosRoute
+  '/pricing': typeof PricingRoute
+  '/services': typeof ServicesRoute
+  '/tone': typeof ToneRoute
   '/typography': typeof TypographyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/brand': typeof BrandRoute
+  '/campaign': typeof CampaignRoute
+  '/children': typeof ChildrenRoute
   '/colors': typeof ColorsRoute
+  '/concepts': typeof ConceptsRoute
   '/elements': typeof ElementsRoute
   '/imagery': typeof ImageryRoute
+  '/klammer': typeof KlammerRoute
+  '/kundeklub': typeof KundeklubRoute
   '/logo': typeof LogoRoute
   '/pos': typeof PosRoute
+  '/pricing': typeof PricingRoute
+  '/services': typeof ServicesRoute
+  '/tone': typeof ToneRoute
   '/typography': typeof TypographyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/brand': typeof BrandRoute
+  '/campaign': typeof CampaignRoute
+  '/children': typeof ChildrenRoute
   '/colors': typeof ColorsRoute
+  '/concepts': typeof ConceptsRoute
   '/elements': typeof ElementsRoute
   '/imagery': typeof ImageryRoute
+  '/klammer': typeof KlammerRoute
+  '/kundeklub': typeof KundeklubRoute
   '/logo': typeof LogoRoute
   '/pos': typeof PosRoute
+  '/pricing': typeof PricingRoute
+  '/services': typeof ServicesRoute
+  '/tone': typeof ToneRoute
   '/typography': typeof TypographyRoute
 }
 export interface FileRouteTypes {
@@ -95,42 +167,74 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/brand'
+    | '/campaign'
+    | '/children'
     | '/colors'
+    | '/concepts'
     | '/elements'
     | '/imagery'
+    | '/klammer'
+    | '/kundeklub'
     | '/logo'
     | '/pos'
+    | '/pricing'
+    | '/services'
+    | '/tone'
     | '/typography'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/brand'
+    | '/campaign'
+    | '/children'
     | '/colors'
+    | '/concepts'
     | '/elements'
     | '/imagery'
+    | '/klammer'
+    | '/kundeklub'
     | '/logo'
     | '/pos'
+    | '/pricing'
+    | '/services'
+    | '/tone'
     | '/typography'
   id:
     | '__root__'
     | '/'
     | '/brand'
+    | '/campaign'
+    | '/children'
     | '/colors'
+    | '/concepts'
     | '/elements'
     | '/imagery'
+    | '/klammer'
+    | '/kundeklub'
     | '/logo'
     | '/pos'
+    | '/pricing'
+    | '/services'
+    | '/tone'
     | '/typography'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BrandRoute: typeof BrandRoute
+  CampaignRoute: typeof CampaignRoute
+  ChildrenRoute: typeof ChildrenRoute
   ColorsRoute: typeof ColorsRoute
+  ConceptsRoute: typeof ConceptsRoute
   ElementsRoute: typeof ElementsRoute
   ImageryRoute: typeof ImageryRoute
+  KlammerRoute: typeof KlammerRoute
+  KundeklubRoute: typeof KundeklubRoute
   LogoRoute: typeof LogoRoute
   PosRoute: typeof PosRoute
+  PricingRoute: typeof PricingRoute
+  ServicesRoute: typeof ServicesRoute
+  ToneRoute: typeof ToneRoute
   TypographyRoute: typeof TypographyRoute
 }
 
@@ -141,6 +245,27 @@ declare module '@tanstack/react-router' {
       path: '/typography'
       fullPath: '/typography'
       preLoaderRoute: typeof TypographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tone': {
+      id: '/tone'
+      path: '/tone'
+      fullPath: '/tone'
+      preLoaderRoute: typeof ToneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pos': {
@@ -157,6 +282,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LogoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kundeklub': {
+      id: '/kundeklub'
+      path: '/kundeklub'
+      fullPath: '/kundeklub'
+      preLoaderRoute: typeof KundeklubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/klammer': {
+      id: '/klammer'
+      path: '/klammer'
+      fullPath: '/klammer'
+      preLoaderRoute: typeof KlammerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/imagery': {
       id: '/imagery'
       path: '/imagery'
@@ -171,11 +310,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ElementsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/concepts': {
+      id: '/concepts'
+      path: '/concepts'
+      fullPath: '/concepts'
+      preLoaderRoute: typeof ConceptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/colors': {
       id: '/colors'
       path: '/colors'
       fullPath: '/colors'
       preLoaderRoute: typeof ColorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/children': {
+      id: '/children'
+      path: '/children'
+      fullPath: '/children'
+      preLoaderRoute: typeof ChildrenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign': {
+      id: '/campaign'
+      path: '/campaign'
+      fullPath: '/campaign'
+      preLoaderRoute: typeof CampaignRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/brand': {
@@ -198,11 +358,19 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BrandRoute: BrandRoute,
+  CampaignRoute: CampaignRoute,
+  ChildrenRoute: ChildrenRoute,
   ColorsRoute: ColorsRoute,
+  ConceptsRoute: ConceptsRoute,
   ElementsRoute: ElementsRoute,
   ImageryRoute: ImageryRoute,
+  KlammerRoute: KlammerRoute,
+  KundeklubRoute: KundeklubRoute,
   LogoRoute: LogoRoute,
   PosRoute: PosRoute,
+  PricingRoute: PricingRoute,
+  ServicesRoute: ServicesRoute,
+  ToneRoute: ToneRoute,
   TypographyRoute: TypographyRoute,
 }
 export const routeTree = rootRouteImport

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="300" viewBox="0 0 440 300">
+  <rect width="440" height="300" fill="#feede0"/>
+  <!-- top-left bracket -->
+  <polyline points="20,80 20,20 80,20" stroke="#e02e31" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- top-right bracket -->
+  <polyline points="420,80 420,20 360,20" stroke="#e02e31" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- bottom-left bracket -->
+  <polyline points="20,220 20,280 80,280" stroke="#e02e31" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- bottom-right bracket -->
+  <polyline points="420,220 420,280 360,280" stroke="#e02e31" stroke-width="5" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- sign-off text (placeholder) -->
+  <text x="220" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#1a1a1a" letter-spacing="1">Kampagnebudskab her</text>
+  <text x="220" y="270" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#e02e31" font-style="italic">Altid en god idé</text>
+  <!-- dimension callouts -->
+  <text x="50" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">5% af smalleste side</text>
+  <text x="388" y="295" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#999">75% afstand til kant</text>
+</svg>
