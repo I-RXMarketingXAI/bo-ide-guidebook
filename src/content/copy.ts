@@ -22,28 +22,28 @@ export const copy = {
   // --------------------------------------------------------------------------
   index: {
     meta: {
-      title: "Bog & idé — Design Guide 2026",
+      title: "Bog & idé — Design Guide",
       description: "Vores visuelle og verbale identitet — samlet ét sted.",
     },
-    kicker: "Design Guide · 2026",
-    title: "Vores visuelle og verbale identitet",
+    kicker: "Bog & idé Design og Brand Guide",
+    title: "Vores brand identitet",
     lead:
-      "Alt hvad du skal bruge for at producere, godkende eller briefe kommunikation fra Bog & idé. Farver, typografi, logo, tone of voice og materialer — samlet ét sted.",
-    signOff: "Altid en god idé",
+      "Alt hvad du skal bruge for at producere, godkende eller briefe kommunikation fra Bog & idé. Farver, typografi, logo, tone of voice og materialer - samlet ét sted.",
+    signOff: "Bog & idé - Altid en god idé",
     sections: [
       { to: "/brand", num: "00", title: "Brand", desc: "Vores løfte, purpose, position og sign-off." },
-      { to: "/tone", num: "01", title: "Tone of Voice", desc: "Hvordan vi taler — passioneret, vidende, inspirerende." },
+      { to: "/tone", num: "01", title: "Tone of Voice", desc: "Hvordan vi taler - passioneret, vidende, inspirerende." },
       { to: "/logo", num: "02", title: "Logo", desc: "Varianter, respektafstand, do & don't, downloads." },
-      { to: "/klammer", num: "02", title: "Klammer", desc: "Vores vigtigste grafiske brand asset." },
-      { to: "/colors", num: "02", title: "Farver", desc: "5 farver med HEX & RGB — klik for at kopiere." },
+      { to: "/klammer", num: "02", title: "Klammer", desc: "Vores grafiske brand asset." },
+      { to: "/colors", num: "02", title: "Farver", desc: "5 farver med HEX & RGB - klik for at kopiere." },
       { to: "/typography", num: "02", title: "Typografi", desc: "Velo Serif Display og Muller." },
-      { to: "/imagery", num: "02", title: "Billedstil", desc: "Nærvær, varme, autenticitet." },
+      { to: "/imagery", num: "02", title: "Billedstil", desc: "Nærvær, varme & autenticitet." },
       { to: "/kundeklub", num: "02", title: "Kundeklub", desc: "Eget visuelt system og tre fordele." },
-      { to: "/services", num: "03", title: "Services", desc: "Ikoner, korte og lange tekstversioner." },
-      { to: "/pricing", num: "04", title: "Priskommunikation", desc: "Taktisk system — hvid baggrund, sort tekst." },
-      { to: "/concepts", num: "05", title: "Koncepter", desc: "Prismatch, Marthaprisen, Årets Spil m.fl." },
+      { to: "/services", num: "03", title: "Services", desc: "Service-Ikoner samt korte og lange beskrivelser." },
+      { to: "/pricing", num: "04", title: "Priskommunikation", desc: "Taktisk system - hvid baggrund, sort tekst." },
+      { to: "/concepts", num: "05", title: "Koncepter", desc: "Prismatch, Marthaprisen, Årets Spil og mere" },
       { to: "/pos", num: "06", title: "POS & Materialer", desc: "Butiks- og digitale formater." },
-      { to: "/children", num: "07", title: "Børneunivers", desc: "Illustrationer, Verveine, baggrund." },
+      { to: "/children", num: "07", title: "Børneunivers", desc: "Illustrationer, Font, baggrund." },
       { to: "/campaign", num: "08", title: "Kampagneskabelon", desc: "Fem elementer i hver kampagne." },
     ] as const,
     cardCta: "Åbn",
@@ -59,26 +59,26 @@ export const copy = {
     },
     header: {
       eyebrow: "00 — Bog & idé som brand",
-      title: "Vores løfte",
-      lead: "Bog & idé er ikke det billigste sted at købe bøger. Det er det bedste sted at vælge dem.",
+      title: "Vores brand løfte",
+      lead: "Bog & idé er ikke det billigste sted at handle produkter. Det er det bedste sted at vælge dem.",
     },
     // Inline <strong> on "kuratering og vejledning" is kept in the page.
     promiseIntro:
-      "Vi konkurrerer ikke på pris. Vi konkurrerer på kuratering og vejledning, og det er svært at kopiere. Vores styrke er evnen til at hjælpe kunden med at vælge rigtigt — i en tid med for mange muligheder og for lidt vejledning.",
+      "Vi konkurrerer ikke på pris. Vi konkurrerer på kuratering, vejledning og inspiration, og det er svært at kopiere. Vores styrke er evnen til at hjælpe kunden med at vælge rigtigt - i en tid med alt for mange muligheder og for lidt vejledning.",
     promiseStrongPhrase: "kuratering og vejledning",
     tags: ["Kuratering", "Vejledning", "Nærvær", "Læselyst"],
-    signOff: "[ Altid en god idé ]",
+    signOff: "Altid en god idé",
     signOffNote:
-      "Brand sign-off — ikke et claim. Afslutter al kommunikation og optræder altid med klammerne. Må aldrig stå alene.",
+      "Altid en god idé er vores brand sign-off. Den afslutter al kommunikation og optræder altid med klammerne. Må aldrig stå alene.",
     purpose: {
       label: "Purpose",
-      title: "Gode valg skaber nærvær i en digital tid",
-      text: "Vi tror på at det rigtige valg — en bog der rammer plet, en gave der viser at man kender modtageren — skaber noget sjældent og værdifuldt. Det er ikke et salgsargument. Det er en overbevisning.",
+      title: "Vi beriger mennesker med nærvær, fordybelse og samvær",
+      text: "Vi lever i en hverdag der er fuld af krav, valg, støj og hastighed. I den kontekst tager Bog & idé aktivt ansvar for at skabe rum til det der giver livet dybde: at fordybe sig i en bog, at give en gave der viser man kender modtageren, at lære noget nyt, at skabe kvalitetstid med dem man holder af.",
     },
     position: {
       label: "Position",
       title: "Vi hjælper dig med at vælge rigtigt",
-      text: "Kunden er omgivet af overvalg. Vores opgave er at skære igennem og pege på det rigtige valg — ikke at præsentere alle muligheder og overlade beslutningen til hende.",
+      text: "Position er den plads Bog & idé ønsker at indtage i kundens bevidsthed, ikke i forhold til hvem vi selv synes vi er, men i forhold til alternativerne. Når en kunde overvejer at købe en bog, hvad er det så der gør, at hun vælger os, frem for andre?",
     },
     signOffLevels: [
       {
@@ -88,7 +88,7 @@ export const copy = {
       {
         title: "Sign-off — positions-niveau",
         // Inline <em> on "altid en god idé" kept in page.
-        text: "Er konklusionen på vores løfte til kunden: vi hjælper dig med at vælge rigtigt — og det valg du tager med hjem er altid en god idé.",
+        text: "Er konklusionen på vores løfte til kunden: vi hjælper dig med at vælge rigtigt - og det valg du tager med hjem er altid en god idé.",
       },
     ],
     filter: {
@@ -107,7 +107,7 @@ export const copy = {
   tone: {
     meta: {
       title: "Tone of Voice — Bog & idé",
-      description: "Bog & idé taler som en passioneret og vidende ven — ikke som en institution.",
+      description: "Bog & idé taler som en passioneret og vidende ven - ikke som en institution.",
     },
     header: {
       eyebrow: "01 — Tone of Voice",
