@@ -1,15 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, PageShell } from "@/components/page";
 import { brandColors, type BrandColor } from "@/lib/brand";
+import { copy } from "@/content/copy";
 import { toast } from "sonner";
 import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 
+const C = copy.colors;
+
 export const Route = createFileRoute("/colors")({
   head: () => ({
     meta: [
-      { title: "Farver — Bog & idé" },
-      { name: "description", content: "Bog & idés farvepalette: én primær brandfarve og fire støttefarver." },
+      { title: C.meta.title },
+      { name: "description", content: C.meta.description },
     ],
   }),
   component: ColorsPage,
@@ -18,28 +21,24 @@ export const Route = createFileRoute("/colors")({
 function Swatch({ color }: { color: BrandColor }) {
   const [copied, setCopied] = useState(false);
 
-  const copy = async (value: string, label: string) => {
+  const copyValue = async (value: string, label: string) => {
     try {
       await navigator.clipboard.writeText(value);
-      toast.success(`${label} kopieret`, { description: value });
+      toast.success(C.toastCopied(label), { description: value });
       setCopied(true);
       setTimeout(() => setCopied(false), 1200);
     } catch {
-      toast.error("Kunne ikke kopiere");
+      toast.error(C.toastFailed);
     }
   };
 
-  const categoryLabel = {
-    primary: "Primær · Brandfarve",
-    background: "Baggrundsfarve",
-    secondary: "Sekundær",
-  }[color.category];
+  const categoryLabel = C.categoryLabels[color.category];
 
   return (
     <div className="overflow-hidden rounded-lg border bg-card">
       <button
         type="button"
-        onClick={() => copy(color.hex, color.name)}
+        onClick={() => copyValue(color.hex, color.name)}
         className="group relative block h-40 w-full"
         style={{ backgroundColor: color.hex }}
         aria-label={`Kopiér ${color.name} hex`}
@@ -58,8 +57,8 @@ function Swatch({ color }: { color: BrandColor }) {
         </div>
         <p className="text-sm text-muted-foreground">{color.role}</p>
         <dl className="space-y-1 pt-1">
-          <Row label="HEX" value={color.hex} onCopy={() => copy(color.hex, `${color.name} HEX`)} />
-          <Row label="RGB" value={color.rgb} onCopy={() => copy(color.rgb, `${color.name} RGB`)} />
+          <Row label="HEX" value={color.hex} onCopy={() => copyValue(color.hex, `${color.name} HEX`)} />
+          <Row label="RGB" value={color.rgb} onCopy={() => copyValue(color.rgb, `${color.name} RGB`)} />
         </dl>
       </div>
     </div>
@@ -82,11 +81,7 @@ function Row({ label, value, onCopy }: { label: string; value: string; onCopy: (
 function ColorsPage() {
   return (
     <PageShell>
-      <PageHeader
-        eyebrow="02 — Visuel identitet"
-        title="Farvepaletten"
-        lead="Paletten er bygget op om én primær brandfarve og fire støttefarver. Den røde farve er brandfarven og bærer identiteten på tværs af alle formater. Klik en farve for at kopiere værdien."
-      />
+      <PageHeader eyebrow={C.header.eyebrow} title={C.header.title} lead={C.header.lead} />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {brandColors.map((c) => (
           <Swatch key={c.hex} color={c} />

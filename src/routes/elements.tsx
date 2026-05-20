@@ -1,35 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, PageShell } from "@/components/page";
+import { copy } from "@/content/copy";
+
+const C = copy.elements;
 
 export const Route = createFileRoute("/elements")({
   head: () => ({
     meta: [
-      { title: "Brand elementer — Bog & idé" },
-      { name: "description", content: "Oversigt over Bog & idés grafiske brand-elementer." },
+      { title: C.meta.title },
+      { name: "description", content: C.meta.description },
     ],
   }),
   component: ElementsPage,
 });
 
-const links = [
-  { to: "/klammer", title: "Klammerne", desc: "Vores vigtigste grafiske brand asset." },
-  { to: "/colors", title: "Farver", desc: "Brandfarve og fire støttefarver." },
-  { to: "/typography", title: "Typografi", desc: "Velo Serif Display og Muller." },
-  { to: "/imagery", title: "Billedstil", desc: "Nærvær, varme, autenticitet." },
-  { to: "/kundeklub", title: "Kundeklub-system", desc: "Rød ramme, beige boks, hvide klammer." },
-  { to: "/children", title: "Børneunivers", desc: "Illustrationer, Verveine, baggrund." },
-] as const;
-
 function ElementsPage() {
   return (
     <PageShell>
-      <PageHeader
-        eyebrow="Oversigt"
-        title="Brand elementer"
-        lead="Genveje til de grafiske byggesten der udgør Bog & idés visuelle identitet."
-      />
+      <PageHeader eyebrow={C.header.eyebrow} title={C.header.title} lead={C.header.lead} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {links.map((l) => (
+        {C.links.map((l) => (
           <Link
             key={l.to}
             to={l.to}
