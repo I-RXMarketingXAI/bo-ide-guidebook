@@ -64,7 +64,7 @@ export const copy = {
     },
     // Inline <strong> on "kuratering og vejledning" is kept in the page.
     promiseIntro:
-      "Vi konkurrerer ikke på pris — SAXO og SallingGroup kan strukturelt matche os der. Vi konkurrerer på kuratering og vejledning, og det er svært at kopiere. Vores styrke er evnen til at hjælpe kunden med at vælge rigtigt — i en tid med for mange muligheder og for lidt vejledning.",
+      "Vi konkurrerer ikke på pris. Vi konkurrerer på kuratering og vejledning, og det er svært at kopiere. Vores styrke er evnen til at hjælpe kunden med at vælge rigtigt — i en tid med for mange muligheder og for lidt vejledning.",
     promiseStrongPhrase: "kuratering og vejledning",
     tags: ["Kuratering", "Vejledning", "Nærvær", "Læselyst"],
     signOff: "[ Altid en god idé ]",
