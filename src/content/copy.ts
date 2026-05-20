@@ -29,7 +29,7 @@ export const copy = {
     title: "Vores visuelle og verbale identitet",
     lead:
       "Alt hvad du skal bruge for at producere, godkende eller briefe kommunikation fra Bog & idé. Farver, typografi, logo, tone of voice og materialer — samlet ét sted.",
-    signOff: "[ Altid en god idé ]",
+    signOff: "Altid en god idé",
     sections: [
       { to: "/brand", num: "00", title: "Brand", desc: "Vores løfte, purpose, position og sign-off." },
       { to: "/tone", num: "01", title: "Tone of Voice", desc: "Hvordan vi taler — passioneret, vidende, inspirerende." },
