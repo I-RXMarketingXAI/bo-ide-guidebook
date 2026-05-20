@@ -1,12 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, PageShell } from "@/components/page";
 import { brandFonts } from "@/lib/brand";
+import { copy } from "@/content/copy";
+
+const C = copy.typography;
 
 export const Route = createFileRoute("/typography")({
   head: () => ({
     meta: [
-      { title: "Typografi — Bog & idé" },
-      { name: "description", content: "Velo Serif Display og Muller. To skrifttyper, ét princip." },
+      { title: C.meta.title },
+      { name: "description", content: C.meta.description },
     ],
   }),
   component: TypographyPage,
@@ -15,11 +18,7 @@ export const Route = createFileRoute("/typography")({
 function TypographyPage() {
   return (
     <PageShell>
-      <PageHeader
-        eyebrow="02 — Visuel identitet"
-        title="Typografi"
-        lead="To skrifttyper. Ét princip: Velo sætter tonen, Muller leverer indholdet."
-      />
+      <PageHeader eyebrow={C.header.eyebrow} title={C.header.title} lead={C.header.lead} />
 
       <section className="space-y-6">
         {brandFonts.map((f) => (
@@ -29,10 +28,7 @@ function TypographyPage() {
               <span className="text-xs uppercase tracking-wider text-muted-foreground">{f.role}</span>
             </div>
             <p className="mt-1 text-sm text-muted-foreground">{f.weights}</p>
-            <p
-              className="mt-6 text-5xl leading-[1.05] md:text-6xl"
-              style={{ fontFamily: f.cssFamily }}
-            >
+            <p className="mt-6 text-5xl leading-[1.05] md:text-6xl" style={{ fontFamily: f.cssFamily }}>
               {f.sample}
             </p>
             <p className="mt-6 max-w-2xl text-sm text-muted-foreground">{f.usage}</p>
@@ -41,18 +37,13 @@ function TypographyPage() {
       </section>
 
       <section className="mt-10 rounded-lg border-l-4 border-primary bg-secondary/40 p-6">
-        <p className="text-[10px] uppercase tracking-[0.2em] text-primary">Grundprincippet</p>
+        <p className="text-[10px] uppercase tracking-[0.2em] text-primary">{C.principleKicker}</p>
         <p className="mt-2 text-base">
-          Velo Serif Display Bold bruges udelukkende til overskrifter, kampagnebudskaber og
-          salgstekster. Muller bruges til alt indhold der skal læses.
-          <strong> Bland dem aldrig på samme tekstniveau.</strong>
+          {C.principle} <strong>{C.principleStrong}</strong>
         </p>
       </section>
 
-      <p className="mt-8 text-xs text-muted-foreground">
-        Note: Velo Serif Display og Muller er licenserede fonts. Online vises de her med tilnærmede
-        fallbacks (DM Serif Display og Manrope) — brug altid de licenserede filer i produktion.
-      </p>
+      <p className="mt-8 text-xs text-muted-foreground">{C.note}</p>
     </PageShell>
   );
 }

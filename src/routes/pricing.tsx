@@ -1,11 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, PageShell } from "@/components/page";
+import { copy } from "@/content/copy";
+
+const C = copy.pricing;
+const E = C.examples;
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Priskommunikation — Bog & idé" },
-      { name: "description", content: "Taktisk priskommunikation — hvid baggrund, sort tekst, ingen klammer." },
+      { title: C.meta.title },
+      { name: "description", content: C.meta.description },
     ],
   }),
   component: PricingPage,
@@ -23,51 +27,42 @@ function PriceTag({ children, variant = "default" }: { children: React.ReactNode
 function PricingPage() {
   return (
     <PageShell>
-      <PageHeader
-        eyebrow="04 — Priskommunikation"
-        title="Pris er taktisk"
-        lead="Priskommunikation adskiller sig bevidst fra brandkommunikation. Den er rent taktisk og følger et stramt visuelt system — ingen klammer, hvid baggrund, sort tekst."
-      />
+      <PageHeader eyebrow={C.header.eyebrow} title={C.header.title} lead={C.header.lead} />
 
       <section className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <PriceTag>
-          <p className="text-xs uppercase tracking-wider text-neutral-500">Standard pris</p>
-          <p className="mt-4 text-sm">Anna Jansson</p>
-          <p className="text-lg font-semibold">Skyggebarn</p>
+          <p className="text-xs uppercase tracking-wider text-neutral-500">{E.standardLabel}</p>
+          <p className="mt-4 text-sm">{E.author}</p>
+          <p className="text-lg font-semibold">{E.bookTitle}</p>
           <p className="mt-6 text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-            199<sup className="text-2xl">95</sup>
+            {E.basePriceMain}<sup className="text-2xl">{E.basePriceCents}</sup>
           </p>
         </PriceTag>
 
         <PriceTag variant="deal">
-          <p className="text-xs uppercase tracking-wider text-neutral-700">Tilbud</p>
-          <p className="mt-4 text-sm">Anna Jansson</p>
-          <p className="text-lg font-semibold">Skyggebarn</p>
-          <p className="mt-4 text-sm text-neutral-500 line-through">199,95</p>
+          <p className="text-xs uppercase tracking-wider text-neutral-700">{E.offerLabel}</p>
+          <p className="mt-4 text-sm">{E.author}</p>
+          <p className="text-lg font-semibold">{E.bookTitle}</p>
+          <p className="mt-4 text-sm text-neutral-500 line-through">{E.offerOldPrice}</p>
           <p className="text-5xl font-bold" style={{ fontFamily: "var(--font-display)", color: "#e02e31" }}>
-            149<sup className="text-2xl">95</sup>
+            {E.offerPriceMain}<sup className="text-2xl">{E.offerPriceCents}</sup>
           </p>
-          <p className="mt-2 text-sm font-bold">SPAR 50.–</p>
+          <p className="mt-2 text-sm font-bold">{E.offerSave}</p>
         </PriceTag>
 
         <PriceTag variant="frit">
-          <p className="text-xs uppercase tracking-wider text-neutral-700">Frit valg</p>
-          <p className="mt-4 text-lg font-bold">FRIT VALG</p>
+          <p className="text-xs uppercase tracking-wider text-neutral-700">{E.freeChoiceLabel}</p>
+          <p className="mt-4 text-lg font-bold">{E.freeChoiceBig}</p>
           <p className="mt-2 text-5xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
-            69<sup className="text-2xl">95</sup>
+            {E.freePriceMain}<sup className="text-2xl">{E.freePriceCents}</sup>
           </p>
-          <p className="mt-2 text-sm">2 bøger: 150.–</p>
-          <p className="mt-1 text-sm font-bold">SPAR 30.–</p>
+          <p className="mt-2 text-sm">{E.freeExtra}</p>
+          <p className="mt-1 text-sm font-bold">{E.freeSave}</p>
         </PriceTag>
       </section>
 
       <section className="mt-12 grid gap-4 md:grid-cols-2">
-        {[
-          ["Hvid baggrund — sort tekst", "Prisskilte og prissplash bruger altid hvid baggrund og sort tekst. Klammerne bruges ikke."],
-          ["Normalpris vises tydeligt", "Når en vare er nedsat, angives normalpris tydeligt ved siden af kampagneprisen."],
-          ["SPAR frem for procent", "\"SPAR [beløb]\" foretrækkes frem for procentsatser — medmindre procenten er særligt fordelagtig."],
-          ["Kampagnefarver tilpasses", "Farverne på prissplash tilpasses de aktuelle kampagnefarver fra paletten."],
-        ].map(([t, d]) => (
+        {C.principles.map(([t, d]) => (
           <div key={t} className="rounded-lg border bg-card p-5">
             <h3 className="text-lg">{t}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{d}</p>
