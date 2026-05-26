@@ -5,7 +5,7 @@ export function PageHeader({ eyebrow, title, lead }: { eyebrow?: string; title: 
     <div className="mb-12 max-w-3xl">
       {eyebrow && <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{eyebrow}</p>}
       <h1 className="mt-3 text-4xl md:text-5xl">{title}</h1>
-      {lead && <p className="mt-5 text-lg text-muted-foreground">{lead}</p>}
+      {lead && <p className="mt-5 text-lg text-muted-foreground whitespace-pre-line">{lead}</p>}
     </div>
   );
 }

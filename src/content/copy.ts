@@ -235,7 +235,7 @@ export const copy = {
     header: {
       eyebrow: "02 — Visuel identitet",
       title: "Farvepaletten",
-      lead: "Paletten er bygget op om én primær brandfarve og fire støttefarver. Den røde farve er brandfarven og bærer identiteten på tværs af alle formater. Klik en farve for at kopiere værdien.",
+      lead: "Paletten er bygget op om én primær brandfarve og fire støttefarver. Den røde farve er brandfarven og bærer identiteten på tværs af alle formater. \nKlik en farve for at kopiere værdien.",
     },
     categoryLabels: {
       primary: "Primær · Brandfarve",
