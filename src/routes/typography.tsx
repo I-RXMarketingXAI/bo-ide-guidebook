@@ -28,7 +28,7 @@ function TypographyPage() {
               <span className="text-xs uppercase tracking-wider text-muted-foreground">{f.role}</span>
             </div>
             <p className="mt-1 text-sm text-muted-foreground">{f.weights}</p>
-            <p className="mt-6 text-5xl leading-[1.05] md:text-6xl" style={{ fontFamily: f.cssFamily }}>
+            <p className="mt-6 text-5xl leading-[1.05] font-bold md:text-6xl" style={{ fontFamily: f.cssFamily }}>
               {f.sample}
             </p>
             <p className="mt-6 max-w-2xl text-sm text-muted-foreground">{f.usage}</p>
